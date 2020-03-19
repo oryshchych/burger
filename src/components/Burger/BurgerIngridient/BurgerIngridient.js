@@ -3,6 +3,7 @@ import classes from "./BurgerIngridient.module.css";
 import PropTypes from "prop-types";
 
 class BurgerIngridient extends Component {
+    
     render () {
         let ingridient = null;
 
@@ -12,9 +13,9 @@ class BurgerIngridient extends Component {
                 break;
             case ('bread-top'):
                 ingridient = (
-                    <div className={classes.BreadBottom}>
-                        <div className={classes.Seed1}></div>
-                        <div className={classes.Seed2}></div>
+                    <div className={classes.BreadTop}>
+                        <div className={classes.Seeds1}></div>
+                        <div className={classes.Seeds2}></div>
                     </div>)
                 break;
             case ('meat'):
@@ -30,7 +31,7 @@ class BurgerIngridient extends Component {
                 ingridient = <div className={classes.Bacon}></div>
                 break;
             default:
-                null;
+                ingridient = null;
         }
         return ingridient;
     }
