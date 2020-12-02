@@ -15,7 +15,11 @@ const buildControls = (props) => (
         {controls.map(control => (
             <BuildControl disabledLessButton={props.disabled[control.type]} added={() => props.ingridientAdded(control.type)} removed={()=> props.ingridientRemoved(control.type)} key={control.label} label={control.label}/>
         ))}
-        <button onClick={props.ordered} className={classes.OrderButton} disabled={!props.purchasable}>ORDER NOW</button>
+        <button onClick={props.ordered} className={classes.OrderButton} disabled={!props.purchasable}>
+            {props.isAuth
+                ? "ORDER NOW"
+                : "Sign in to order"}
+            </button>
     </div>
 );
 
