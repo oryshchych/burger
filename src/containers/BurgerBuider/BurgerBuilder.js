@@ -10,7 +10,7 @@ import withErrorsHandler from "../../hoc/withErrorsHandler/withErrorsHandler";
 import {connect} from 'react-redux';
 import * as burderBuilderActions from '../../store/actions/index';
 
-class BurgerBuilder extends Component {
+export class BurgerBuilder extends Component {
   constructor(props) {
     super(props);
     this.state = {
